@@ -8,5 +8,10 @@ const auctionController = require('../controllers/auctionController');
 router.post('/create', auctionController.createAuction);
 
 // Add more routes for updating, deleting, fetching auctions, etc.
+// Get information about a specific auction by ID
+router.get('/:auctionId', auctionController.getAuctionById);
+
+// Get all auctions
+router.get('/', auctionController.getAllAuctions);
 
 module.exports = router;

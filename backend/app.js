@@ -3,7 +3,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const auctionRoutes = require('./routes/auctionRoutes');
+
 
 const app = express();
 
@@ -11,6 +13,7 @@ const app = express();
 mongoose.connect('mongodb://localhost:27017/auctionApp', { useNewUrlParser: true, useUnifiedTopology: true, });
 
 // Middleware
+app.use(cors());
 app.use(bodyParser.json());
 
 // Use auction routes
