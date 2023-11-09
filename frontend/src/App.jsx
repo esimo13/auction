@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div>
       <h1>Auction App</h1>
-      <CreateAuctionForm />
+      {/* <CreateAuctionForm /> */}
       <AuctionList />
     </div>
   );

@@ -1,6 +1,7 @@
 // src/components/AuctionList.js
 
 import React, { useState, useEffect } from 'react';
+import './AuctionList.css';
 
 const AuctionList = () => {
   const [auctions, setAuctions] = useState([]);
